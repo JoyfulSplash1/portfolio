@@ -4,59 +4,41 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
-img {
+img{
     width: 100%;
+    height: auto;
 }
-
-
 .section1 {
     background-color: #0891B3;
-    width: 100%;
-    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-size: 200% 200%;
-    background-image: linear-gradient(to bottom right, #0891B3 30%, white 25%);
+    /* background-image: linear-gradient(to bottom right, #0891B3 50%, white 0%); */
 }
 
-.SectionWrapper {
-    width: 90%;
-    height: 100vh;
+.SectionWrapper{
     display: flex;
-    justify-content: center;
+    /* flex-wrap: wrap; */
     align-items: center;
 }
-
-
-.SectionWrapper .ImgCon {
+.SectionWrapper .ImgContainer{
     position: relative;
-    height: 90vh;
+    /* height: auto; */
+}
+.SectionWrapper .ImgContainer img{
     width: 100%;
-    flex: 6;
-
+    height: 100%;
 }
 
-.SectionWrapper .ImgCon img {
-    position: absolute;
-    height: 90vh;
-    width: 100%;
-
-}
-
-.SectionWrapper .ImgCon span {
-    font-size: 35px;
+.ImgContainer span{
+    position:relative;
     color: white;
     font-family: sans-serif;
+    font-size: 35px;
     font-weight: 700;
-    position: relative;
-    top: 80vh;
+    transform: translateY(-50%);
 }
 
-.SectionWrapper .TextCon {
-    flex: 6;
-    height: 70vh;
+.TextCon{
     padding: 30px 10px 10px 40px;
     display: flex;
     flex-direction: column;
@@ -64,18 +46,18 @@ img {
     background-color: white;
 }
 
-.TextCon h2 {
-    font-size: 5rem;
+.TextCon h2{
+    font-size:5rem;
     font-family: sans-serif;
 }
 
-.iconCon {
+.iconCon{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-
 }
+
 
 /* ==================== SECTION ONE END===========   */
 
@@ -100,22 +82,22 @@ img {
 }
 
 .cardContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
-.cardImg  img{
+.cardImg img {
     height: 40vh;
     width: 100%;
 }
 
 .Card {
-    width: 100%;
+    width: 350px;
     background-color: white;
     padding-bottom: 50px;
-    box-shadow: 5px 12px 20px 4px #666;
-    border-radius:8px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .cardhead {
@@ -175,14 +157,14 @@ img {
     margin: 10px 0;
 }
 
-.imgCon {
+footer .ImgContainer {
     flex: 6;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.imgCon img {
+footer .ImgContainer img {
     width: 80%;
 }
 
